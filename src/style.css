@@ -1,0 +1,95 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  overflow-x: hidden;
+}
+h2 {
+  font-family: 'Playfair Display', serif;
+  /* Playfair Display for the "About us" heading */
+  font-size: 1.875rem;
+  
+    /* text-3xl */
+    @media (min-width: 640px) {
+      /* sm:text-4xl */
+      font-size: 2.25rem;
+    }
+  
+    @media (min-width: 768px) {
+      /* md:text-5xl */
+      font-size: 3rem;
+    }
+  
+    @media (min-width: 1024px) {
+      /* lg:text-6xl */
+      font-size: 3.75rem;
+    }
+  
+    font-weight: 700;
+    /* font-bold */
+    color: #a1754c;
+    /* text-[#a1754c] */
+    text-align: center;
+    /* text-center */
+    padding-top: 5rem;
+  
+    /* pt-20 */
+    @media (min-width: 640px) {
+      /* sm:p-12 sm:mx-4 */
+      padding: 3rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+  
+    @media (min-width: 1024px) {
+      /* lg:p-20 */
+      padding: 5rem;
+    }
+}
+
+
+
+
+/* Apply background image to the entire page */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url('/path/to/your/background-image.jpg');
+  /* Replace with your image path */
+  background-size: cover;
+  /* Ensure the image covers the entire area */
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Prevent repeating the image */
+}
+
+/* Optional: Apply background image to all other elements if needed */
+div,
+section,
+header,
+footer,
+nav,
+main,
+aside,
+article,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  background-image: inherit;
+  /* Inherit background image from body */
+}
+
+
+
+
