@@ -80,7 +80,7 @@ onUnmounted(() => {
     background-image: url('../assets/BGBLACK.jpg');
     background-size: cover;
     background-position: center;
-    filter: blur(10px);
+    filter: blur(15px);
     z-index: -1;
 }
 

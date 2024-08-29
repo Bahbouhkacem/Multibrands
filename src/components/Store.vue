@@ -44,15 +44,14 @@ import b7 from '../assets/store7.jpg'
 import b8 from '../assets/store8.jpg'
 import b9 from '../assets/store9.jpg'
 
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 
-// Data for slider items with two images per slide
 const sliderItems = [
     { image1: b1, image2: b2 },
     { image1: b3, image2: b4 },
     { image1: b5, image2: b6 },
     { image1: b7, image2: b8 },
-    { image1: b9, image2: b1 } // Reuse images or add more if available
+    { image1: b9, image2: b1 }
 ];
 
 const slider = ref(null);
@@ -77,6 +76,11 @@ const nextSlide = () => {
 
 onMounted(() => {
     updateSliderPosition(); // Initialize position
+    const interval = setInterval(nextSlide, 3000); // Automatic slide every 3 seconds
+
+    onUnmounted(() => {
+        clearInterval(interval); // Clear interval when component is unmounted
+    });
 });
 </script>
 
@@ -84,7 +88,6 @@ onMounted(() => {
 #store {
     position: relative;
     background: none;
-    /* Remove any background image from the main section */
 }
 
 .blurred-bg {

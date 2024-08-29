@@ -64,6 +64,7 @@ const iconRef = ref(icon);
                 </div>
 
 
+
                 <!-- Card 2 -->
                 <div class="card">
                     <div class="content">
@@ -162,7 +163,7 @@ const iconRef = ref(icon);
 
 .card {
     flex: 1;
-    max-width: calc(33.33% - 20px);
+    max-width: 125px;
     /* Adjust width to fit three cards with spacing */
     height: 254px;
     overflow: visible;

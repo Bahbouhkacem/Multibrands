@@ -1,13 +1,14 @@
 <template>
   <div>
     <NavBar />
-    <Home/>
+    
+    <Home />
     <AboutUs />
-    <Brands/>
-    <Store/>
+    <Brands />
+    <Store />
     <locations />
     
-    <ContactUs/>
+    <ContactUs />
     <Footer />
   </div>
 </template>
