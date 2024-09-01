@@ -1,6 +1,6 @@
 <template>
     <section id="landing" class="relative flex items-center h-screen bg-center bg-cover">
-        <div class="shared-bg"></div>
+        <div class="blurred-bg"></div>
             <div class="container relative z-10 px-2 mx-auto">
                 <h2
                     class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#a1754c] text-center p-10 sm:p-12 sm:m-12 lg:p-20 hidden md:block">
