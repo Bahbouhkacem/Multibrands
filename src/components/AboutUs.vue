@@ -108,6 +108,11 @@ onMounted(() => {
     background-position: center;
     filter: blur(10px);
     z-index: -1;
+    min-height: 100vh;
+        /* Ensure it takes full height of the viewport */
+        /* Remove any additional margin/padding */
+        margin: 0;
+        padding: 0;
 }
 
 .slider-item {

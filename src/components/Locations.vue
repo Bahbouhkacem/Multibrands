@@ -10,9 +10,9 @@ const iconRef = ref(icon);
 <template>
     <section id="locations" class="relative flex items-center h-screen">
         <div class="background-image"></div>
-        <div class="container relative z-10 px-4 mx-auto">
+        <div class="container relative z-10 px-8 mx-4">
             <h2
-                class="text-3xl  sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#a1754c] text-center  pt-20  sm:p-12 sm:mx-4 lg:p-20">
+                class="text-3xl  mb-28 sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#a1754c] text-center  pt-0  sm:p-12 sm:mx-4 lg:p-20">
                 Our Locations</h2>
             <div class="card-container">
 
@@ -109,12 +109,7 @@ const iconRef = ref(icon);
     </section>
 </template>
 
-<style scoped>
-.hello-world {
-    margin: 20px 0;
-    /* Adjust spacing as needed */
-}
-</style>
+
 
 
 <style scoped>
@@ -163,9 +158,9 @@ const iconRef = ref(icon);
 
 .card {
     flex: 1;
-    max-width: 125px;
+    max-width: 200px;
     /* Adjust width to fit three cards with spacing */
-    height: 254px;
+    height: 240px;
     overflow: visible;
 }
 
@@ -348,4 +343,5 @@ background-repeat: no-repeat;
     filter: blur(15px);
     animation: floating 2600ms infinite linear;
 }
+
 </style>

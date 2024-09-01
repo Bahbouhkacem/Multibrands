@@ -1,39 +1,39 @@
 <template>
     <section id="landing" class="relative flex items-center h-screen bg-center bg-cover">
-        <div class="blurred-bg"></div>
-        <div class="container relative z-10 px-2 mx-auto">
-            <h2
-                class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#a1754c] text-center p-10 sm:p-12 sm:m-12 lg:p-20 hidden md:block">
-                Welcome to MULTIBRANDS
-            </h2>
-            <div class="relative mt-8 slider-container">
-                <div class="flex transition-transform duration-700 ease-in-out slider" ref="slider">
-                    <div class="flex items-center justify-center flex-shrink-0 w-full px-0 slider-item md:flex"
-                        v-for="(item, index) in sliderItems" :key="index">
-                        <div class="w-full text-center">
-                            <h3 class="mb-4 text-2xl font-bold text-[#a1754c]">{{ item.title }}</h3>
-                            <div class="flex justify-center">
-                                <img :src="item.image" alt="Slide Image"
-                                    class="w-full h-auto rounded-lg shadow-md md:w-auto" />
+        <div class="shared-bg"></div>
+            <div class="container relative z-10 px-2 mx-auto">
+                <h2
+                    class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#a1754c] text-center p-10 sm:p-12 sm:m-12 lg:p-20 hidden md:block">
+                    Welcome to MULTIBRANDS
+                </h2>
+                <div class="relative mt-8 slider-container">
+                    <div class="flex transition-transform duration-700 ease-in-out slider" ref="slider">
+                        <div class="flex items-center justify-center flex-shrink-0 w-full px-0 slider-item md:flex"
+                            v-for="(item, index) in sliderItems" :key="index">
+                            <div class="w-full text-center">
+                                <h3 class="mb-4 text-2xl font-bold text-[#a1754c]">{{ item.title }}</h3>
+                                <div class="flex justify-center">
+                                    <img :src="item.image" alt="Slide Image"
+                                        class="w-full h-auto rounded-lg shadow-md md:w-auto" />
+                                </div>
+                                <p class="text-[#f0efed] mb-4 text-lg sm:text-xl lg:text-2xl font-serif"
+                                    v-html="item.description"></p>
                             </div>
-                            <p class="text-[#f0efed] mb-4 text-lg sm:text-xl lg:text-2xl font-serif"
-                                v-html="item.description"></p>
                         </div>
                     </div>
+
+                    <!-- Navigation Buttons -->
+                    <button hidden @click="prevSlide"
+                        class="absolute left-0 p-2 text-white transform -translate-y-1/2 bg-gray-800 rounded-full top-1/2 hover:bg-gray-600">
+                        &#10094;
+                    </button>
+                    <button hidden @click="nextSlide"
+                        class="absolute right-0 p-2 text-white transform -translate-y-1/2 bg-gray-800 rounded-full top-1/2 hover:bg-gray-600">
+                        &#10095;
+                    </button>
                 </div>
 
-                <!-- Navigation Buttons -->
-                <button hidden @click="prevSlide"
-                    class="absolute left-0 p-2 text-white transform -translate-y-1/2 bg-gray-800 rounded-full top-1/2 hover:bg-gray-600">
-                    &#10094;
-                </button>
-                <button  hidden @click="nextSlide"
-                    class="absolute right-0 p-2 text-white transform -translate-y-1/2 bg-gray-800 rounded-full top-1/2 hover:bg-gray-600">
-                    &#10095;
-                </button>
             </div>
-
-        </div>
 
     </section>
 </template>
@@ -99,6 +99,14 @@ onMounted(() => {
 </script>
 
 <style scoped>
+.shared-bg {
+    /* This will ensure the background is applied properly within each component */
+    min-height: 100vh;
+    /* Ensure it takes full height of the viewport */
+    /* Remove any additional margin/padding */
+    margin: 0;
+    padding: 0;
+}
 #landing {
     position: relative;
     background: none;

@@ -93,3 +93,10 @@ p {
 
 
 
+.shared-bg {
+background-image: url('../assets/BGBLACK.jpg');
+  /* Or use background-color */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
