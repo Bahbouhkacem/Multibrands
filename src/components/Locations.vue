@@ -1,21 +1,23 @@
 <script setup>
-
-
 import { ref } from 'vue';
 import icon from '../assets/backggg.jpg'; // Adjust the path if necessary
 
 const iconRef = ref(icon);
-
 </script>
+
 <template>
     <section id="locations" class="relative flex items-center h-screen">
         <div class="background-image"></div>
         <div class="container relative z-10 px-8 mx-4">
             <h2
-                class="text-3xl  mb-28 sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#a1754c] text-center  pt-0  sm:p-12 sm:mx-4 lg:p-20">
-                Our Locations</h2>
+                class="text-3xl mb-28 sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#a1754c] text-center pt-0 sm:p-12 sm:mx-4 lg:p-20">
+                Our Locations
+            </h2>
+            <!-- Paragraph only visible on mobile -->
+            <p class="mobile-paragraph text-center text-[#a1754c] mb-4">
+                Come to see us
+            </p>
             <div class="card-container">
-
                 <!-- Card 1 -->
                 <div class="card">
                     <div class="content">
@@ -42,8 +44,7 @@ const iconRef = ref(icon);
                                             </a>
                                         </p>
                                         <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0 0 256 256"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                                            xmlns="http://www.w3.org/2000/svg">
+                                            xmlns:xlink="http://www.w3.org/2000/svg">
                                             <g fill="#20c997">
                                                 <path d="M25 27l-9-6.75-9 6.75v-23h18z" />
                                             </g>
@@ -62,8 +63,6 @@ const iconRef = ref(icon);
                         need us!"
                     </p>
                 </div>
-
-
 
                 <!-- Card 2 -->
                 <div class="card">
@@ -90,8 +89,7 @@ const iconRef = ref(icon);
                                             </a>
                                         </p>
                                         <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0 0 256 256"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                                            xmlns="http://www.w3.org/2000/svg">
+                                            xmlns:xlink="http://www.w3.org/2000/svg">
                                             <g fill="#20c997">
                                                 <path d="M25 27l-9-6.75-9 6.75v-23h18z" />
                                             </g>
@@ -109,15 +107,11 @@ const iconRef = ref(icon);
     </section>
 </template>
 
-
-
-
 <style scoped>
 /* CSS for Locations Section */
 #locations {
     position: relative;
     overflow: hidden;
-    /* Ensure no overflow from background image */
 }
 
 #locations .background-image {
@@ -128,29 +122,21 @@ const iconRef = ref(icon);
     height: 100%;
     background-image: url('../assets/locations1.jpg');
     background-size: cover;
-    /* Ensure the image covers the entire section */
     background-position: center;
-    /* Center the background image */
     background-repeat: no-repeat;
-    /* Prevent repeating the background image */
     filter: blur(8px);
-    /* Apply the blur effect */
     z-index: -1;
-    /* Ensure it is behind the content */
 }
 
 #locations .container {
     position: relative;
     z-index: 0;
-    /* Ensure the content is above the background image */
 }
-/*  The cards animation */
 
 .card-container {
     display: flex;
     justify-content: space-between;
     gap: 20px;
-    /* Space between cards */
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
@@ -159,7 +145,6 @@ const iconRef = ref(icon);
 .card {
     flex: 1;
     max-width: 200px;
-    /* Adjust width to fit three cards with spacing */
     height: 240px;
     overflow: visible;
 }
@@ -172,7 +157,6 @@ const iconRef = ref(icon);
     box-shadow: 0px 0px 10px 1px #000000ee;
     border-radius: 5px;
 }
-
 
 .front,
 .back {
@@ -228,7 +212,7 @@ const iconRef = ref(icon);
         transform: rotateZ(0deg);
     }
 
-    0% {
+    100% {
         transform: rotateZ(360deg);
     }
 }
@@ -246,8 +230,8 @@ const iconRef = ref(icon);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
 }
+
 .front .front-contents {
     position: absolute;
     width: 100%;
@@ -258,7 +242,6 @@ const iconRef = ref(icon);
     justify-content: space-between;
     background-image: url('../assets/gps2.png');
     background-repeat: no-repeat;
-
 }
 
 .front .front-content2 {
@@ -269,9 +252,10 @@ const iconRef = ref(icon);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-background-image: url('../assets/gps1.png');
-background-repeat: no-repeat;
+    background-image: url('../assets/gps1.png');
+    background-repeat: no-repeat;
 }
+
 .front-content2 .badge {
     background-color: #00000055;
     padding: 2px 10px;
@@ -279,8 +263,8 @@ background-repeat: no-repeat;
     backdrop-filter: blur(2px);
     width: fit-content;
     color: black;
-    /* Added text color */
 }
+
 .front-contents .badge {
     background-color: #00000055;
     padding: 2px 10px;
@@ -288,8 +272,8 @@ background-repeat: no-repeat;
     backdrop-filter: blur(2px);
     width: fit-content;
     color: black;
-    /* Added text color */
 }
+
 .front-content .badge {
     background-color: #00000055;
     padding: 2px 10px;
@@ -297,7 +281,6 @@ background-repeat: no-repeat;
     backdrop-filter: blur(2px);
     width: fit-content;
     color: black;
-        /* Added text color */
 }
 
 .description {
@@ -314,34 +297,38 @@ background-repeat: no-repeat;
     max-width: 100%;
     display: flex;
     justify-content: space-between;
-}
-
-.title p {
-    width: 50%;
+    align-items: center;
+    gap: 10px;
 }
 
 .card-footer {
-    color: #ffffff88;
-    margin-top: 5px;
-    font-size: 8px;
-}
-
-.front .img {
-    position: absolute;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+    background-color: #00000077;
+    padding: 5px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
 }
 
-.circle {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    background-color: #ffbb66;
-    position: relative;
-    filter: blur(15px);
-    animation: floating 2600ms infinite linear;
+.hello-world {
+    color: #a1754c;
 }
 
+@media (max-width: 768px) {
+    .hello-world {
+        display: none;
+    }
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .mobile-paragraph {
+        display: block;
+    }
+}
+
+/* Hide the paragraph by default */
+.mobile-paragraph {
+    display: none;
+}
 </style>

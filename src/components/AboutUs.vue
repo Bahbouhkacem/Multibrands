@@ -1,21 +1,22 @@
 <template>
     <section id="about" class="relative flex flex-col items-center h-screen bg-center bg-cover">
         <div class="blurred-bg"></div>
-        <div class="container z-10 mx-2 px-auto sm:px-6 lg:px-8">
+        <div class="container z-10 px-4 mx-auto sm:px-6 lg:px-8">
             <h2
-                class="text-3xl  sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#a1754c] text-center  pt-20  sm:p-12 sm:mx-4 lg:p-20">
+                class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#a1754c] text-center pt-20 sm:p-12 sm:mx-4 lg:p-20">
                 About us
             </h2>
             <div class="mx-auto slider-container sm:mt-8">
                 <div class="flex transition-transform duration-700 ease-in-out slider" ref="slider">
-                    <div class="flex flex-col flex-shrink-0 w-full px-0 slider-item sm:flex-row sm:w-full"
+                    <div class="flex flex-col flex-shrink-0 w-full p-4 sm:flex-row sm:w-full slider-item"
                         v-for="(item, index) in sliderItems" :key="index">
-                        <div class="order-2 w-full p-4 sm:w-1/2 sm:order-1">
+                        <div class="order-2 w-full sm:w-1/2 sm:order-1">
                             <p class="text-[#f0efed] mb-4 text-lg sm:text-xl lg:text-2xl font-serif" v-html="item.text">
                             </p>
                         </div>
-                        <div class="order-1 w-full p-AUTO sm:w-1/2 sm:order-2">
-                            <img :src="item.image" alt="About Us" class="w-full mb-0 rounded-lg shadow-md">
+                        <div class="order-1 w-full sm:w-1/2 sm:order-2">
+                            <img :src="item.image" alt="About Us"
+                                class="w-full h-auto max-w-sm mx-auto rounded-lg shadow-md">
                         </div>
                     </div>
                 </div>
@@ -108,11 +109,7 @@ onMounted(() => {
     background-position: center;
     filter: blur(10px);
     z-index: -1;
-    min-height: 100vh;
-        /* Ensure it takes full height of the viewport */
-        /* Remove any additional margin/padding */
-        margin: 0;
-        padding: 0;
+   
 }
 
 .slider-item {

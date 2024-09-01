@@ -22,16 +22,16 @@ import b2 from '../assets/versacelogo.jpg';
 import b3 from '../assets/jc1.png';
 import b4 from '../assets/kll1.png';
 import b5 from '../assets/mkk.png';
-import b6 from '../assets/h&b111.png';
+import b6 from '../assets/HB14.PNG';
 
 // Data for slider items
 const sliderItems = [
     { image: b1 },
-    { image: b2 },
+    { image: b6 },
     { image: b3 },
     { image: b4 },
     { image: b5 },
-    { image: b6 }
+    { image: b2 }
 ];
 </script>
 
@@ -56,20 +56,31 @@ const sliderItems = [
 
 .brands-slider {
     display: flex;
-    overflow: hidden;
-    scroll-behavior: smooth;
-    width: 100%;
     flex-wrap: wrap;
+    justify-content: center;
+    /* Center items on larger screens */
+    gap: 10px;
+    /* Add space between items */
 }
 
 .brand-image {
-    min-width: 200px;
+    flex: 0 0 45%;
+    /* Show two items per row on mobile */
+    background-color: rgb(175, 103, 36);
+    /* Light grey background */
+    padding: 10px;
+    /* Add some padding inside the item */
+    border-radius: 10px;
     transition: opacity 1s ease;
     opacity: 0;
 }
 
 .brand-image img {
     width: 100%;
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 @keyframes fadeIn {
@@ -82,16 +93,17 @@ const sliderItems = [
     animation: fadeIn 1s forwards;
 }
 
-@media (max-width: 640px) {
-    .brands-slider {
-        justify-content: space-between;
-    }
-
+@media (min-width: 640px) {
     .brand-image {
-        width: 48%;
-        /* Show two items per row */
-        margin-bottom: 10px;
-        /* Space between rows */
+        flex: 0 0 30%;
+        /* Show three items per row on tablet and larger screens */
+    }
+}
+
+@media (min-width: 1024px) {
+    .brand-image {
+        flex: 0 0 20%;
+        /* Show five items per row on desktop screens */
     }
 }
 
