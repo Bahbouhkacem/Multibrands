@@ -4,7 +4,7 @@
 
     <div class="absolute inset-0 bg-center bg-cover blur-md" style="background-image: url('../assets/contactus.jpg');">
     </div>
-    <div class="relative w-full max-w-6xl p-6 space-y-6 bg-white rounded-lg shadow-lg">
+    <div class="relative w-full max-w-6xl px-8 space-y-6 bg-white rounded-lg shadow-lg">
       <!-- Contact Section Title and Description -->
       <div class="text-center">
         <h2

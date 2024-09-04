@@ -22,7 +22,7 @@ import b2 from '../assets/versacelogo.jpg';
 import b3 from '../assets/jc1.png';
 import b4 from '../assets/kll1.png';
 import b5 from '../assets/mkk.png';
-import b6 from '../assets/HB14.PNG';
+import b6 from '../assets/HB14.png';
 
 // Data for slider items
 const sliderItems = [

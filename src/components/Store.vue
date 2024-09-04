@@ -1,12 +1,12 @@
 <template>
     <section id="store" class="relative flex items-center h-screen bg-center bg-cover">
         <div class="blurred-bg"></div>
-        <div class="container relative z-10 px-2 mx-auto">
+        <div class="container relative z-10 px-8 mx-auto">
             <h2
-                class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#a1754c] text-center p-10 sm:p-12 sm:m-12 lg:p-20">
+                class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#a1754c] text-center pb-20 sm:p-12 sm:m-12 lg:p-20">
                 Our Store
             </h2>
-            <div class="relative mt-8 slider-container">
+            <div class="relative pb-4 mb-4 -mt-20 slider-container ">
                 <div class="flex transition-transform duration-700 ease-in-out slider" ref="slider">
                     <div class="flex-shrink-0 w-full px-0 slider-item md:flex" v-for="(item, index) in sliderItems"
                         :key="index">

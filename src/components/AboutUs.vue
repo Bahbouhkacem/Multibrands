@@ -1,7 +1,7 @@
 <template>
     <section id="about" class="relative flex flex-col items-center h-screen bg-center bg-cover">
         <div class="blurred-bg"></div>
-        <div class="container z-10 px-4 mx-auto sm:px-6 lg:px-8">
+        <div class="container z-10 px-8 mx-auto sm:px-6 lg:px-8">
             <h2
                 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#a1754c] text-center pt-20 sm:p-12 sm:mx-4 lg:p-20">
                 About us
