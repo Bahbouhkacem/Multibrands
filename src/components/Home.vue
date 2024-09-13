@@ -1,4 +1,5 @@
 <template>
+    
     <section id="landing" class="relative flex items-center h-screen bg-center bg-cover">
         <div class="blurred-bg"></div>
             <div class="container relative z-10 px-2 mx-auto">

@@ -36,7 +36,7 @@ const iconRef = ref(icon);
                                 <div class="circle" id="bottom"></div>
                             </div>
                             <div class="front-content2">
-                                <small class="badge">Benghazi</small>
+                                <small class="badge">Benghazi Store</small>
                                 <div class="description">
                                     <div class="title">
                                         <p class="title">
@@ -82,7 +82,7 @@ const iconRef = ref(icon);
                                 <div class="circle" id="bottom"></div>
                             </div>
                             <div class="front-contents">
-                                <small class="badge">Shari al Matar, Tripoli, Libya</small>
+                                <small class="badge">Tripoli Store</small>
                                 <div class="description">
                                     <div class="title">
                                         <p class="title">
