@@ -1,6 +1,8 @@
 <script setup>
 import { ref } from 'vue';
-import icon from '../assets/backggg.jpg'; // Adjust the path if necessary
+import icon from '../assets/backggg.jpg'; // Photos on back card route
+import icon2 from '../assets/benghazi1.jpg';
+
 
 const iconRef = ref(icon);
 </script>
@@ -23,7 +25,7 @@ const iconRef = ref(icon);
                     <div class="content">
                         <div class="back">
                             <div class="back-content">
-                                <img :src="icon" alt="Icon" height="100px" width="130px" />
+                                <img :src="icon2" alt="Icon" height="100px" width="130px" />
                                 <strong>Location 1</strong>
                             </div>
                         </div>
@@ -34,7 +36,7 @@ const iconRef = ref(icon);
                                 <div class="circle" id="bottom"></div>
                             </div>
                             <div class="front-content2">
-                                <small class="badge">Syahiya Road, Tripoli, Libya</small>
+                                <small class="badge">Benghazi</small>
                                 <div class="description">
                                     <div class="title">
                                         <p class="title">
@@ -299,6 +301,7 @@ const iconRef = ref(icon);
     justify-content: space-between;
     align-items: center;
     gap: 10px;
+    color : black;
 }
 
 .card-footer {

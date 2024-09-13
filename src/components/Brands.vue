@@ -17,12 +17,12 @@
 </template>
 
 <script setup>
-import b1 from '../assets/bugatti1.png';
+import b1 from '../assets/bugatti2.png';
 import b2 from '../assets/versacelogo.jpg';
-import b3 from '../assets/jc1.png';
-import b4 from '../assets/kll1.png';
+import b3 from '../assets/jc2.jpg';
+import b4 from '../assets/kll2.jpg';
 import b5 from '../assets/mkk.png';
-import b6 from '../assets/HB14.png';
+import b6 from '../assets/HB14.jpg';
 
 // Data for slider items
 const sliderItems = [
